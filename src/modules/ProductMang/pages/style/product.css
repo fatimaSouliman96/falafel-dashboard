@@ -1,0 +1,31 @@
+.productMang{
+    padding: 1rem;
+    padding-top: 6rem;
+    width: 73%;
+    text-align: right;    
+}
+.productMang h1{
+    /* direction: rtl; */
+    font-size: 2rem;
+    
+}
+.productMang .add-pro{
+    color: white;
+    margin: 0.5rem 0;
+    background-color: var(---background-orange);
+    border: none;
+    transition: 0.7s ease;
+    box-shadow: inset  -2px 3px 17px 1px #f5b67696 , -3px 5px 5px 0px #f5b676 ;
+}
+.productMang .add-pro:hover{
+    box-shadow: inset -2px 3px 17px 1px var(---background-orange);
+    background-color: white;
+    color: var(---background-orange);
+
+}
+
+@media (max-width: 990px){
+    .productMang{
+        width: 100%;
+    }
+}

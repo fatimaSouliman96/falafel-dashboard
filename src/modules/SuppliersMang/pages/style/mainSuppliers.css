@@ -1,0 +1,11 @@
+
+.main-suppliers{
+    padding: 8rem 1rem;
+    width: 73%;
+}
+
+@media (max-width:990px){
+    .main-suppliers{
+        width: 100%;
+    }
+}

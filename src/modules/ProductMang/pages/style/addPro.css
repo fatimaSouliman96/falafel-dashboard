@@ -1,0 +1,26 @@
+.addPro{
+    padding: 6rem 1rem;
+    width: 73%;
+    text-align: right;
+}
+.addPro .add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.addPro .add svg{
+    width: 30%;
+    color: var(---olive);
+}
+.addPro .add .form-input{
+    width: 70%;
+}
+@media (max-width:990px){
+    .addPro{
+        width: 100%;
+    }
+    .addPro .add{
+        flex-direction: column-reverse;
+    }
+}

@@ -1,0 +1,10 @@
+.editProduct{
+    padding: 8rem 1rem;
+    width: 73%;
+}
+
+@media (max-width: 990px){
+    .editProduct{
+        width: 100%;
+    }
+}

@@ -1,0 +1,23 @@
+.add-supplier{
+    width: 100%;
+    text-align: right;
+}
+.add-supplier .add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.add-supplier .add svg{
+    width: 30%;
+    color: var(---olive);
+}
+.add-supplier .add .form-input{
+    width: 70%;
+}
+
+@media (max-width:990px){
+    .add-supplier .add{
+        flex-direction: column-reverse;
+    }
+}
