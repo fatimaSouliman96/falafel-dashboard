@@ -8,6 +8,9 @@
     
     
 }
+.table-bordered{
+    border: none!important;
+}
 .table-striped tbody tr:nth-of-type(odd){
     background-color: transparent!important;
 }
