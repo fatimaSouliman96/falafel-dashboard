@@ -25,12 +25,12 @@ function Sidebar() {
 
             <Nav.Item>
               <FaShoppingCart size={30}/>
-              <Link to="product">ادارة المنتجات</Link>
+              <Link to="/falafel-dashboard/product">ادارة المنتجات</Link>
             </Nav.Item>
 
             <Nav.Item>
               <FaPeopleArrows size={30}/>
-            <Link to="suppliers">ادارة الموردين</Link>
+            <Link to="/falafel-dashboard/suppliers">ادارة الموردين</Link>
             </Nav.Item>
 
             <Nav.Item>
