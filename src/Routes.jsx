@@ -7,7 +7,7 @@ import { routerMainSuppliers } from './modules/SuppliersMang/routes/routerMainSu
 
 export const router = createBrowserRouter([
     {
-      path: "/falafel-project/",
+      path: "/falafel-dashboard/",
       element: <App />,
       children: [ 
             ...routerHome,
