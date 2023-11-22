@@ -20,7 +20,7 @@ function Sidebar() {
           <Navbar.Nav mr="auto">
             <Nav.Item active>
               <AiFillHome  size={30}/>
-              <Link to="/" >الصفحة الرئيسية</Link>
+              <Link to="/falafel-dashboard/" >الصفحة الرئيسية</Link>
             </Nav.Item>
 
             <Nav.Item>
