@@ -6,7 +6,7 @@ import { routerSuppliersMang } from "./routerSuppliersMang";
 export const routerMainSuppliers = 
 [
     {
-    path: "suppliers",
+    path: "/falafel-project/suppliers",
     element: <MainSuppliers />,
     children: [
         ...routerSuppliersMang,

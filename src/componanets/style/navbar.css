@@ -1,7 +1,7 @@
 .nav-bar-header {
     position: fixed;
-    margin-top: 0.5rem ;
-    width: 65%;
+    margin: 0.5rem ;
+    width:73%;
     padding: 1rem;
     box-shadow: -10px 16px 20px 0px var(---olive-opacity);
     border: 0.1rem solid var(---olive-opacity);

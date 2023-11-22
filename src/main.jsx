@@ -8,8 +8,8 @@ import { RouterProvider } from 'react-router'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ThemeProvider dir="rtl">
-    <RouterProvider router={router}/>
+    <ThemeProvider dir="rtl" >
+    <RouterProvider router={router} basename='/falafel-project'/>
     </ThemeProvider>
   </React.StrictMode>,
 )

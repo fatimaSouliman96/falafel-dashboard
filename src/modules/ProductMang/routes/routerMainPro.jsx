@@ -6,7 +6,7 @@ import { routerProduct } from "./routesProduct";
 export const routerMainPro = 
 [
     {
-    path: "/product",
+    path: "/falafel-project/product",
     element: <MainPro />,
     children: [
         ...routerProduct,
