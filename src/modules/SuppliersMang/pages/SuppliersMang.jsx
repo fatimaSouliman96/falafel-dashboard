@@ -46,7 +46,7 @@ function SuppliersMang() {
   return (
     <div className='suppliers' >
       <h1 className='title' >ادارة الموردين</h1>
-      <button onClick={() => navigate("addSupplier")} className='add-pro' >اضافة مورد<CiCirclePlus style={{paddingLeft:"0.5rem"}} size={25}/></button>
+      <button onClick={() => navigate("addSupplier")} className='add-pro' >اضافة مورد<CiCirclePlus style={{paddingLeft:"0.5rem"}} size={35}/></button>
       <ProductTable infoTh={infoSupp} contentTable={<TableContentSuppliers data={data} toNavigate={goTo} deletePro={deleteSupp}/>}/>
     </div>
   )

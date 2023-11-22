@@ -49,7 +49,7 @@ function ProductMang() {
   return (
     <div className='productMang' >
       <h1>ادارة المنتجات</h1>
-      <button onClick={() => navigate("addproduct")} className='add-pro' >اضافة منتج<CiCirclePlus style={{paddingLeft:"0.5rem"}} size={25}/></button>
+      <button onClick={() => navigate("addproduct")} className='add-pro' >اضافة منتج<CiCirclePlus style={{paddingLeft:"0.5rem"}} size={35}/></button>
       <ProductTable infoTh={InfoTable} contentTable={<ContentTable deletePro={deletePro} toNavigate={goTo} data={data} />} />
       
     </div>

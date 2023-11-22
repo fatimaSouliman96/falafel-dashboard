@@ -51,6 +51,10 @@ tr:nth-child(even) {background-color: #fe83087e!important;}
     border: none;
     color: white;
     transition: 0.7s ease;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
 }
 .btns .edit{
     background-color: green;

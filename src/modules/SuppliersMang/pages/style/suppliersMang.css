@@ -14,6 +14,7 @@
     border: none;
     transition: 0.7s ease;
     box-shadow: inset  -2px 3px 17px 1px #f5b67696 , -3px 5px 5px 0px #f5b676 ;
+    border-radius: 1rem;
 }
 .suppliers .add-pro:hover{
     box-shadow: inset -2px 3px 17px 1px var(---background-orange);
