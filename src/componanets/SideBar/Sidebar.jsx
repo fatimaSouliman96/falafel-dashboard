@@ -11,7 +11,7 @@ function Sidebar() {
 
   return (
     <>
-     <Navbar  expand="lg" light bg="light">
+     <Navbar  expand="lg" >
         <Navbar.Brand href="#">
           فلافل
         </Navbar.Brand>
