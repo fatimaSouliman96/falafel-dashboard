@@ -9,9 +9,6 @@ function Input(props) {
   function change(value , placeholder ) {
     props.onChange(value , placeholder);
 }
-function remove(event){
-  props.remove(event)
-}
   return (
     <div className={props.styleInput} >
        <FloatingLabel controlId="floatingInput" label={props.label} className="mb-3" >

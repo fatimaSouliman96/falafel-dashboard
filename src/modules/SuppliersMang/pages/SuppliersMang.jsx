@@ -6,14 +6,18 @@ import TableContentSuppliers from '../componanets/TableContentSuppliers'
 import './style/suppliersMang.css'
 import { CiCirclePlus } from "react-icons/ci";
 import { useNavigate } from 'react-router'
+import HeaderMange from '../../../componanets/HeaderMangeTable/HeaderMange'
 
 function SuppliersMang() {
     const [ data ,setData ] = useState()
+    const [ allData , setAllData ] = useState()
     const navigate = useNavigate()
     useEffect( () => {
     axios.get("https://api-pos.alzero1store.com/api/suppliers")
-        .then(res => setData(res.data.data))
-        console.log(data)
+    .then(function (res) {
+      setAllData(res.data.data)
+      setData(res.data.data)
+    })
     } , [])
 
     const goTo = (num, id) => {
@@ -43,10 +47,23 @@ function SuppliersMang() {
       }
   
     }
+    const onChangeSearch = async(e) => {
+      if (e.target.value=="") {
+        console.log("empty")
+        setData(allData)
+      }else{
+      await axios.get(`https://api-pos.alzero1store.com/api/suppliers/search/${e.target.value}`)
+          .then(res => setData(res.data.data))
+          .catch(function (error) {
+            console.log(error);
+          });}
+  
+    }
+  
   return (
     <div className='suppliers' >
       <h1 className='title' >ادارة الموردين</h1>
-      <button onClick={() => navigate("addSupplier")} className='add-pro' >اضافة مورد<CiCirclePlus style={{paddingLeft:"0.5rem"}} size={35}/></button>
+      <HeaderMange goTo={"addSupplier"} textBtn={"اضافة مورد"}  onChangeSearch={onChangeSearch}/>
       <ProductTable infoTh={infoSupp} contentTable={<TableContentSuppliers data={data} toNavigate={goTo} deletePro={deleteSupp}/>}/>
     </div>
   )

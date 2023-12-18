@@ -10,7 +10,7 @@ function ProductTable({ infoTh , contentTable}) {
           <tr>
             {
               infoTh.map(ele => [
-                <th>{ele.name}</th>
+                <th key={ele} >{ele.name}</th>
               ])
             }
             <th></th>

@@ -6,16 +6,22 @@ import { InfoTable } from '../const/infoTable'
 import axios from 'axios'
 import ContentTable from '../componanets/ContentTable'
 import { CiCirclePlus } from "react-icons/ci";
+import HeaderMange from '../../../componanets/HeaderMangeTable/HeaderMange'
 
 function ProductMang() {
   const navigate = useNavigate()
   const [data, setData] = useState()
-
-  useEffect(() => {
-    axios.get("https://api-pos.alzero1store.com/api/products")
-      .then(res => setData(res.data.data))
-    console.log(data)
-  }, [])
+  const [ allData , setAllData ] = useState()
+ 
+    useEffect(() => {
+      axios.get("https://api-pos.alzero1store.com/api/products")
+      .then(function (res) {
+        setAllData(res.data.data)
+        setData(res.data.data)
+      })
+        
+    }, [])
+  
 
   const goTo = (num, id) => {
     navigate("editProduct", {
@@ -34,8 +40,6 @@ function ProductMang() {
     if (conf) {
       const newData = data.filter(ele => ele.id !== id)
       setData(newData)
-
-
       await axios.delete(`https://api-pos.alzero1store.com/api/products/${id}`)
         .then(function (response) {
           console.log(response);
@@ -44,14 +48,26 @@ function ProductMang() {
           console.log(error);
         });
     }
+    
+  }
+  const onChangeSearch = async(e) => {
+    if (e.target.value=="") {
+      console.log("empty")
+      setData(allData)
+    }else{
+    await axios.get(`https://api-pos.alzero1store.com/api/products/search/${e.target.value}`)
+        .then(res => setData(res.data.data))
+        .catch(function (error) {
+          console.log(error);
+        });}
 
   }
   return (
     <div className='productMang' >
       <h1>ادارة المنتجات</h1>
-      <button onClick={() => navigate("addproduct")} className='add-pro' >اضافة منتج<CiCirclePlus style={{paddingLeft:"0.5rem"}} size={35}/></button>
+      <HeaderMange goTo={"addproduct"} textBtn="اضافة منتج" onChangeSearch={onChangeSearch} />
       <ProductTable infoTh={InfoTable} contentTable={<ContentTable deletePro={deletePro} toNavigate={goTo} data={data} />} />
-      
+
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './style/addSupplier.css'
 import { useLocation } from "react-router-dom";
-import Form from '../../../componanets/Form/Form';
 import { FaPeopleCarry } from 'react-icons/fa';
-import { infoForm } from '../const/infoForm';
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Form from 'react-bootstrap/Form';
 import axios from 'axios'
 
 function EditSupplier() {
@@ -13,11 +13,6 @@ function EditSupplier() {
     const [phone, setPhone] = useState(location.state.phone)
     const [address, setAddress] = useState( location.state.address)
 
-    const values = [
-        name,
-        phone,
-        address,
-    ]
     function change(value , placeholder ) {
     
         console.log(name)
@@ -66,7 +61,21 @@ function EditSupplier() {
     <div className='add-supplier'>
       <h1>تعديل مورد</h1>
       <div className='add' >
-      <Form data={infoForm} typeBtn={"اضافة"} value={values} change={change} onSubmit={onSubmit}/>
+      <div className='form-input'>
+          <FloatingLabel controlId="floatingInput"  label="اسم المورد" className="mb-3" >
+            <Form.Control value={name} onChange={(event) => change(event.target.value, event.target.placeholder)} type="text" placeholder="phone" />
+          </FloatingLabel>
+
+          <FloatingLabel controlId="floatingInput"  label="رقم الاتصال" className="mb-3" >
+            <Form.Control value={phone} onChange={(event) => change(event.target.value, event.target.placeholder)} type="text" placeholder="phone" />
+          </FloatingLabel>
+
+          <FloatingLabel controlId="floatingInput"   label="العنوان"  className="mb-3" >
+            <Form.Control value={address} onChange={(event) => change(event.target.value, event.target.placeholder)} type="text" placeholder="address" />
+          </FloatingLabel>
+    
+          <button className='add-item' onClick={(event) => onSubmit(event)} >تعديل المورد</button>
+        </div>
       <FaPeopleCarry size={100}  />
       </div>
     </div>

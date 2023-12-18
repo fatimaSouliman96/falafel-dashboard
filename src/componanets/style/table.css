@@ -43,8 +43,12 @@ tr:nth-child(even) {background-color: #fe83087e!important;}
     
 }
 .btns{
-    width: 14rem!important;
+    width: 17rem!important;
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
 }
 .btns button {
     margin-left: 1rem;
@@ -54,7 +58,8 @@ tr:nth-child(even) {background-color: #fe83087e!important;}
     border-radius: 1rem;
     display: flex;
     align-items: center;
-    gap: 0.2rem;
+    gap: 0.3rem;
+    box-shadow: inset  -2px 3px 17px 1px #f5b67696 , -3px 5px 5px 0px #f5b676;
 }
 .btns .edit{
     background-color: green;
@@ -62,8 +67,14 @@ tr:nth-child(even) {background-color: #fe83087e!important;}
 .btns .del{
     background-color: red;
 }
+.btns .puyPtn{
+    background-color: rgb(0, 183, 255);
+}
+.btns .detilsPtn{
+    background-color: gray;
+}
 .btns button:hover{
-    box-shadow: inset 1px 1px 17px 1px white;
+    box-shadow: inset 0px 1px 20px 0px #f9e8d7;
 }
 .spinner-border{
     margin:1rem;

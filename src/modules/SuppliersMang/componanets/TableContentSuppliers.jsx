@@ -7,14 +7,14 @@ function TableContentSuppliers({data , toNavigate, deletePro}) {
         <>
             {
                 data ? data.map((ele, index) => [
-                    <tr   >
+                    <tr  key={ele} >
                         <td>{index + 1}</td>
                         {ele.name ? <td>{ele.name}</td> : null}
                         {ele.phone ? <td>{ele.phone}</td> : null}
                         {ele.address ? <td>{ele.address}</td> : null}
                         <td className='btns' >
-                            <button className='edit' onClick={e => toNavigate(index, ele.id)} > <FaRegEdit /> تعديل</button>
-                            <button className='del' onClick={e => deletePro(ele.id)}><MdDeleteOutline /> حذف </button>
+                            <button className='edit' onClick={() => toNavigate(index, ele.id)} > <FaRegEdit /> تعديل</button>
+                            <button className='del' onClick={() => deletePro(ele.id)}><MdDeleteOutline /> حذف </button>
                         </td>
                     </tr>
                 ]) :

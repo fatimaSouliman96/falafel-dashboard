@@ -1,5 +1,6 @@
 .nav-bar-header {
-    position: fixed;
+    position: fixed!important;
+    z-index: 9;
     margin: 0.5rem ;
     width:73%;
     padding: 1rem;
@@ -11,10 +12,50 @@
 .nav-bar-header svg{
     margin-left: 1rem;
     color: #fe83087e;
+    cursor: pointer;
 }
+.showList{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 1px 1px gray;
+    background-color: white;
+    list-style-type: none;
+    direction: rtl;
+    padding: 0.5rem;
+    top: 3.5rem;
+}
+.nav-bar-header .dropDownList{
+    display: none;
+}
+.nav-bar-header .showList li{
+    margin-top: 0.1rem;
+    text-align: right;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    padding: 0.2rem;
+    transition: 0.7s ease;
+    
+}
+.nav-bar-header .showList li:hover{
+    cursor: pointer;
+    background-color: var(---olive-opacity);
 
+}
+.nav-bar-header .showList span{
+    text-align: right;
+    padding-top: 0.5rem;
+    display: block;
+    font-weight: 900;
+}
+.nav-bar-header .showList .line{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.459);
+    width: 80%;
+}
 @media (max-width: 990px){
     .nav-bar-header{
+        
         box-shadow: none;
         border: none;
         background-color: transparent;

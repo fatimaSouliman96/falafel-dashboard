@@ -1,31 +1,29 @@
-
 .navbar {
-    position: fixed;
+    position: fixed!important;
     top: 0;
     right: 0;
-    flex-direction: column !important;
+    z-index: 9;
+    flex-direction: column!important;
     width: 25%;
     height: 97%;
     float: right;
     border-radius: 1rem;
     margin: 0.5rem;
     border: 0.1rem solid var(---olive-opacity);
-    box-shadow: -7px 20px 18px 0px var(---olive-opacity);
-   
+    box-shadow: -7px 20px 18px 0px var(---olive-opacity);  
+    background-color: white;
 }
-.bg-light{
-    background-color: white!important;
-}
+
 .navbar-collapse{
     width: 100%;
 }
+
 .navbar-nav {
     flex-direction: column !important;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     margin: 0!important;
     width: 100%;
-
 }
 
 .navbar-brand{
@@ -37,44 +35,48 @@
 }
 
 .nav-item{
-    padding: 1rem;
     width: 100%;
     text-align: right;
     display: flex;
     align-items: center;
-    gap: 1rem;
     direction: rtl; 
     border-radius: 1rem;
     transition: 0.7s ease;
 }
 
-.nav-item:hover{
-    background-color: var(---olive);
+.nav-item .navLink:hover{
+    background-color: var(---olive-opacity);
     color: white;
     transition: 0.7s ease;
     cursor: pointer;
 }
 
-.nav-item:hover a{
+.nav-item .navLink:hover{
     text-decoration:none!important;
     color: white!important;
     border: none!important;
     transition: 0.7s ease;
 }
-
-.nav-item a{
-
-    color: black!important;
-    transition: 0.7s ease;
-
-}
-
-.nav-item:hover svg{
+.nav-item .navLink:hover svg{
     color: white;
 }
+.nav-item .navLink{
+    border: none!important;
+    color: black!important;
+    transition: 0.7s ease;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+
+}
+.active{
+    background-color: var(---olive-opacity)!important;
+}
+
 
 .nav-item svg{
     color: #fe83087e;
+    margin-left: 1rem;
 }
 
 .navbar-light .navbar-toggler{
@@ -89,8 +91,43 @@
 .navbar-light .navbar-toggler:hover .navbar-toggler-icon{
     background-color: var(---orange-opacity);
 }
+.dropLink{
+    display: flex;
+    flex-direction: column;
+}
+.drop{
+    display: none;  
+}
 
+.dropDown{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
+.dropDown a{
+    text-align: right!important;
+    width: 100%!important;
+    padding: 0.5rem!important;
+    border-radius: 1rem!important;
+    transition: 0.7s ease!important;
+    background-color: white;
+    color: black;
+    
+}
+
+.dropDown a:hover{
+    cursor: pointer!important;
+    background-color: var(---olive-opacity)!important;
+    color: white!important;
+}
+
+.show{
+    display: inline-block;
+}
+.none{
+    display: none;
+}
 @media (max-width:990px) {
     
     .navbar {

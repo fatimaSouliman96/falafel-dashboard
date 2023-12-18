@@ -9,7 +9,7 @@ function ContentTable({ data, toNavigate, deletePro }) {
             {
 
                 data ? data.map((ele, index) => [
-                    <tr id={ele.id} >
+                    <tr key={ele} id={ele.id} >
                         <td>{index + 1}</td>
                         {ele.name ? <td>{ele.name}</td> : null}
                         {ele.brand ? <td>{ele.brand}</td> : null}
