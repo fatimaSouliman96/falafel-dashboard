@@ -6,7 +6,8 @@ import { MdDelete } from "react-icons/md";
 function Profile() {
 
   return (
-    <div className="profile" >
+    <div className="div-profile" >
+      <div className="profile" >
       <FaCircleUser size={100} className="profile-icon"/>
       <span>احمد</span>
       <span>ahmad@gmail.com</span>
@@ -16,6 +17,8 @@ function Profile() {
         <li className="item-list" >حذف الحساب  <MdDelete /></li>
       </ul>
     </div>
+    </div>
+    
   )
 }
 

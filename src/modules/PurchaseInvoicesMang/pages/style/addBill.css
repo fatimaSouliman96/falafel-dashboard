@@ -1,0 +1,91 @@
+.add-bill-form{
+    width: 73%;
+    padding: 8rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-bottom: 20rem;
+    
+}
+.add-bill-form h1{
+    text-align: right;
+}
+.add-bill-form h2{
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    color: var(---olive);
+    text-align: right;
+}
+.add-bill-form p{
+    text-align: right;
+}
+.add-pro-to-bill{
+  border: 1px solid gray;
+  width: 80%;
+  border-radius: 1rem;
+  padding: 3rem;
+  margin-top: 1rem;
+  margin: auto;  
+}
+.form-add-price{
+    display: flex;
+    flex-direction: column;
+}
+.add-form{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 2rem;
+}
+
+.total-price{
+    width: 50%;
+    float: right;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 1px 1px var(---olive);
+}
+.title-bill{
+    padding-top: 3rem;
+}
+.form-input{
+    padding-top: 2rem;
+}
+.rest-add-bill{
+    padding-top: 2rem;
+    width: 100%;
+}
+.add-bill-form textarea{
+    border: 1px solid #a8a7a7!important;
+}
+.add-bill-form .form-label{
+    float: right!important;
+}
+
+.add-bill-btn{
+    border-radius: 1rem;
+    background: linear-gradient(359grad,#808000b3,var(---olive),var(---olive),#808000b3);
+    color: white;
+    margin-bottom: 1rem;
+    width: 50%;
+    margin: auto;
+    border: none;
+    transition: 0.7s ease;
+    margin-top: 2rem;
+    
+}
+
+.add-bill-btn:hover{
+    box-shadow: -3px 3px 7px 0px gray;
+}
+.footer-btn{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width:990px){
+    .add-bill-form{
+        width: 100%;
+    }
+}

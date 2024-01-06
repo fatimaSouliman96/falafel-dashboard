@@ -3,13 +3,16 @@ import App from './App.jsx'
 import { routerHome } from './pages/Home/routes/routesHome.jsx';
 import { routerMainPro } from './modules/ProductMang/routes/routerMainPro.jsx';
 import { routerMainSuppliers } from './modules/SuppliersMang/routes/routerMainSuppliers.jsx';
-import { routerMainStore } from './modules/StoreMang/routes/routerMain.jsx';
-import { routerPaidBill } from './modules/BillsMang/routes/routerPaidBill.jsx';
-import { routerPartlyBill } from './modules/BillsMang/routes/routerPartlyBill.jsx';
+import { routerPaidBill } from './modules/PurchaseInvoicesMang/routes/routerPaidBill.jsx';
+import { routerPartlyBill } from './modules/PurchaseInvoicesMang/routes/routerPartlyBill.jsx';
 import { routerProfile } from './pages/Profile/routes/routerProfile.jsx';
-import { routerAllBills } from './modules/BillsMang/routes/routerAllBills.jsx';
-import { routerDatils } from './modules/BillsMang/routes/routerDatils.jsx'
-import { routerAddBill } from './modules/BillsMang/routes/routerAddBill.jsx'
+import { routerAllBills } from './modules/PurchaseInvoicesMang/routes/routerAllBills.jsx';
+import { routerDatils } from './modules/PurchaseInvoicesMang/routes/routerDatils.jsx'
+import { routerAddBill } from './modules/PurchaseInvoicesMang/routes/routerAddBill.jsx'
+import { routerMainSales } from './modules/SalesInvoicesMang/routes/mainSalesRouter.jsx';
+import { routerStore } from './modules/StoreMang/routes/routerStore.jsx';
+import { routerEditBill } from './modules/PurchaseInvoicesMang/routes/routerEditBill.jsx';
+
 export const router = createBrowserRouter([
     {
       path: "/falafel-dashboard/",
@@ -18,13 +21,16 @@ export const router = createBrowserRouter([
             ...routerHome,
             ...routerMainPro,
             ...routerMainSuppliers,
-            ...routerMainStore,
+            ...routerStore,
             ...routerAllBills,
             ...routerPaidBill,
             ...routerPartlyBill,
             ...routerDatils,
             ...routerProfile,
-            ...routerAddBill
+            ...routerAddBill,
+            ...routerEditBill,
+            ...routerMainSales,
+            
         ]
     },
   ]);

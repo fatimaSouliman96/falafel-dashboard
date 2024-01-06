@@ -52,7 +52,6 @@ function ProductMang() {
   }
   const onChangeSearch = async(e) => {
     if (e.target.value=="") {
-      console.log("empty")
       setData(allData)
     }else{
     await axios.get(`https://api-pos.alzero1store.com/api/products/search/${e.target.value}`)

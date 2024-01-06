@@ -5,7 +5,7 @@
     text-align: right;
     border-collapse: separate;
     border: none;
-    
+    overflow: auto;
     
 }
 .table-bordered{

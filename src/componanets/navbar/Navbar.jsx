@@ -29,7 +29,6 @@ function Navbar() {
         <li onClick={() => navigate("/falafel-dashboard/profile")} ><FaUserEdit /> تعديل الحساب</li>
         <li> <IoLogOutOutline />تسجيل خروج</li>
       </ul>
-
     </div>
   )
 }

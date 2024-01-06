@@ -1,0 +1,36 @@
+.add-bill .add-form{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    padding-top: 3rem;
+    flex-wrap: wrap;
+    
+}
+
+.add-bill .add-form .form{
+    width: 50%;    
+}
+
+.add-bill .add-form .form input{
+    width: 100%;
+}
+
+.add-bill .add-form svg{
+    color: var(---olive);
+}
+
+.add-btn{
+    border-radius: 1rem;
+    background: linear-gradient(359grad,#808000b3,var(---olive),var(---olive),#808000b3);
+    color: white;
+    margin-bottom: 1rem;
+    width: 50%;
+    margin: auto;
+    border: none;
+    transition: 0.7s ease;
+    margin-top: 1rem;
+}
+
+.add-btn:hover{
+    box-shadow: -3px 3px 7px 0px gray;
+}

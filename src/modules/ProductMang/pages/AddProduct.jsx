@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './style/addPro.css'
 import axios from 'axios'
 import { IoLogoDropbox } from "react-icons/io";

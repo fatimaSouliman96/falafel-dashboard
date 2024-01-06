@@ -1,3 +1,10 @@
+.div-profile{
+    width: 73%;
+    padding: 8rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .profile{
     display: flex;
     flex-direction: column;
@@ -5,8 +12,6 @@
     justify-content: center;
     align-items: center;
     width: 50%;
-    margin: auto;
-    margin-top: 8rem;
     border: 1px solid #dbd7d7;
     background-color: rgba(222, 244, 245, 0.219);
     border-radius: 1rem;

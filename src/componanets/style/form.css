@@ -48,11 +48,17 @@ input:focus{
 .add-pro-btn:hover{
     box-shadow: -3px 3px 7px 0px gray;
 }
+
+.footer-btn button{
+    width: 13rem;
+}
+
+
 .form-pro{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row-reverse;
-    align-items: center;
+    flex-direction: column;
+    align-items: end;
     gap: 2rem;
 }
 .form-pro .custom-select{
