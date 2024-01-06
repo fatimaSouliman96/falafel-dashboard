@@ -10,24 +10,16 @@ function AddSupplier() {
   const [phone, setPhone] = useState("")
   const [address, setAddress] = useState("")
 
-  function change(value, placeholder) {
-
-    if (placeholder == "name") {
+  function changeName(value) {
       setName(value)
-
     }
-
-    if (placeholder == "phone") {
+  function changePhone(value) {
       setPhone(value)
-
     }
-
-    if (placeholder == "address") {
+  function changeAddress(value) {
       setAddress(value)
-
     }
 
-  }
   const onSubmit = async () => {
     await axios.post("https://api-pos.alzero1store.com/api/suppliers", {
       name: name,
@@ -61,15 +53,15 @@ function AddSupplier() {
       <div className='add' >
         <div className='form-input'>
           <FloatingLabel controlId="floatingInput"  label="اسم المورد" className="mb-3" >
-            <Form.Control value={name} onChange={(event) => change(event.target.value, event.target.placeholder)} type="text" placeholder="phone" />
+            <Form.Control value={name} onChange={(event) => changeName(event.target.value)} type="text" placeholder="phone" />
           </FloatingLabel>
 
           <FloatingLabel controlId="floatingInput"  label="رقم الاتصال" className="mb-3" >
-            <Form.Control value={phone} onChange={(event) => change(event.target.value, event.target.placeholder)} type="text" placeholder="phone" />
+            <Form.Control value={phone} onChange={(event) => changePhone(event.target.value)} type="text" placeholder="phone" />
           </FloatingLabel>
 
           <FloatingLabel controlId="floatingInput"   label="العنوان"  className="mb-3" >
-            <Form.Control value={address} onChange={(event) => change(event.target.value, event.target.placeholder)} type="text" placeholder="address" />
+            <Form.Control value={address} onChange={(event) => changeAddress(event.target.value)} type="text" placeholder="address" />
           </FloatingLabel>
     
           <button className='add-item' onClick={(event) => onSubmit(event)} >اضافة المورد</button>
