@@ -12,28 +12,22 @@ function AddProduct() {
   const [unit, setUnit] = useState()
   const [description, setDescription] = useState()
 
-  function change(value, placeholder) {
-
-
-    if (placeholder == "name") {
+  function changeName(value) {
       setName(value)
-
     }
 
-    if (placeholder == "brand") {
+    function changeBrand(value) {
       setBrand(value)
-
     }
 
-    if (placeholder == "unit") {
+    function changeUnit(value) {
       setUnit(value)
-
     }
-    if (placeholder == "description") {
+
+    function changeDescription(value) {
       setDescription(value)
-
     }
-  }
+      
 
   const onSubmit = async () => {
     setName("")
@@ -71,26 +65,27 @@ function AddProduct() {
     <div className='addPro' >
       <h1>اضافة منتج</h1>
       <div className='add' >
+      <IoLogoDropbox size={200} />
         <div className='form-input' >
           <FloatingLabel controlId="floatingInput" label="اسم المنتج" className="mb-3" >
-            <Form.Control value={name} onChange={(event) => change(event.target.value, event.target.placeholder)} type="text" placeholder="name"  />
+            <Form.Control value={name} onChange={(event) => changeName(event.target.value)} type="text" placeholder="name"  />
           </FloatingLabel>
 
           <FloatingLabel controlId="floatingInput" label="نوع المنتج" className="mb-3" >
-            <Form.Control value={brand} onChange={(event) => change(event.target.value, event.target.placeholder)} type="text" placeholder="brand"  />
+            <Form.Control value={brand} onChange={(event) => changeBrand(event.target.value)} type="text" placeholder="brand"  />
           </FloatingLabel>
 
           <FloatingLabel controlId="floatingInput" label="الواحدة" className="mb-3" >
-            <Form.Control value={unit} onChange={(event) => change(event.target.value, event.target.placeholder)} type="text" placeholder="unit"  />
+            <Form.Control value={unit} onChange={(event) => changeUnit(event.target.value)} type="text" placeholder="unit"  />
           </FloatingLabel>
 
           <FloatingLabel controlId="floatingInput" label="الوصف" className="mb-3" >
-            <Form.Control value={description} onChange={(event) => change(event.target.value, event.target.placeholder)} type="text" placeholder="description"  />
+            <Form.Control value={description} onChange={(event) => changeDescription(event.target.value)} type="text" placeholder="description"  />
           </FloatingLabel>
   
           <button className='add-item' onClick={(event) => onSubmit(event)} >اضافة المنتج</button>
         </div>
-        <IoLogoDropbox size={150} />
+        
       </div>
 
     </div>

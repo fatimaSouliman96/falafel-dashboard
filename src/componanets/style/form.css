@@ -4,13 +4,14 @@
     border-bottom: 1px solid #a8a7a7!important;
     border-radius: 0!important;
     background-color: transparent!important;
+
 }
 
 label{
     direction: rtl;
-    right: 0!important;
-    left:auto!important;
-    color: #a8a7a7;
+    /* right:0!important; */
+    color: #a8a7a7!important;
+    left: 22rem!important;
 }
 
 input:focus{

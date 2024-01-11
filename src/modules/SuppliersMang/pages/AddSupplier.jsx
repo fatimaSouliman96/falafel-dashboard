@@ -11,14 +11,14 @@ function AddSupplier() {
   const [address, setAddress] = useState("")
 
   function changeName(value) {
-      setName(value)
-    }
+    setName(value)
+  }
   function changePhone(value) {
-      setPhone(value)
-    }
+    setPhone(value)
+  }
   function changeAddress(value) {
-      setAddress(value)
-    }
+    setAddress(value)
+  }
 
   const onSubmit = async () => {
     await axios.post("https://api-pos.alzero1store.com/api/suppliers", {
@@ -51,22 +51,23 @@ function AddSupplier() {
     <div className='add-supplier'>
       <h1>اضافة مورد</h1>
       <div className='add' >
+        <FaPeopleCarry size={100} />
         <div className='form-input'>
-          <FloatingLabel controlId="floatingInput"  label="اسم المورد" className="mb-3" >
+          <FloatingLabel controlId="floatingInput" label="اسم المورد" className="mb-3" >
             <Form.Control value={name} onChange={(event) => changeName(event.target.value)} type="text" placeholder="phone" />
           </FloatingLabel>
 
-          <FloatingLabel controlId="floatingInput"  label="رقم الاتصال" className="mb-3" >
+          <FloatingLabel controlId="floatingInput" label="رقم الاتصال" className="mb-3" >
             <Form.Control value={phone} onChange={(event) => changePhone(event.target.value)} type="text" placeholder="phone" />
           </FloatingLabel>
 
-          <FloatingLabel controlId="floatingInput"   label="العنوان"  className="mb-3" >
+          <FloatingLabel controlId="floatingInput" label="العنوان" className="mb-3" >
             <Form.Control value={address} onChange={(event) => changeAddress(event.target.value)} type="text" placeholder="address" />
           </FloatingLabel>
-    
+
           <button className='add-item' onClick={(event) => onSubmit(event)} >اضافة المورد</button>
         </div>
-        <FaPeopleCarry size={100} />
+
       </div>
     </div>
   )

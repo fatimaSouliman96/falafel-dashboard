@@ -9,8 +9,8 @@
     float: right;
     border-radius: 1rem;
     margin: 0.5rem;
-    border: 0.1rem solid var(---olive-opacity);
-    box-shadow: -7px 20px 18px 0px var(---olive-opacity);  
+    /* border: 0.1rem solid var(---olive-opacity); */
+    box-shadow: -1px 5px 20px 0px #dddad6; 
     background-color: white;
     
 
@@ -52,34 +52,34 @@
 }
 
 .nav-item .navLink:hover{
-    background-color: var(---olive-opacity);
-    color: white;
-    transition: 0.7s ease;
     cursor: pointer;
-}
-
-.nav-item .navLink:hover{
     text-decoration:none!important;
-    color: white!important;
+    background-color: #fe8308ab;
     border: none!important;
     transition: 0.7s ease;
+    color: white!important;
 }
 .nav-item .navLink:hover svg{
-    color: white;
+    color: white!important;
+}
+.active{
+    background-color: #fe8308ab!important;
+    color: white!important;
 }
 .nav-item .navLink{
     border: none!important;
-    color: black!important;
+    color: black;
     transition: 0.7s ease;
     width: 100%;
     border-radius: 1rem;
     padding: 1rem;
 
 }
-.active{
-    background-color: var(---olive-opacity)!important;
-}
 
+
+.active svg{
+    color: white!important;
+}
 
 .nav-item svg{
     color: #fe83087e;
@@ -111,21 +111,25 @@
     flex-direction: column;
     gap: 0.5rem;
 }
-
+.dropLink .navLink{
+    color: black;
+}
+.dropLink .dropLink{
+    color: black!important;
+}
 .dropDown a{
     text-align: right!important;
     width: 100%!important;
     padding: 0.5rem!important;
     border-radius: 1rem!important;
     transition: 0.7s ease!important;
-    background-color: white;
-    color: black;
+  
     
 }
 
 .dropDown a:hover{
     cursor: pointer!important;
-    background-color: var(---olive-opacity)!important;
+    background-color: #fe8308ab!important;
     color: white!important;
 }
 

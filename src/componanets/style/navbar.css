@@ -4,8 +4,8 @@
     margin: 0.5rem ;
     width:73%;
     padding: 1rem;
-    box-shadow: -10px 16px 20px 0px var(---olive-opacity);
-    border: 0.1rem solid var(---olive-opacity);
+    box-shadow: -10px 16px 20px 0px #dddad6 ;
+    /* border: 0.1rem solid var(---olive-opacity); */
     border-radius: 1rem;
     background-color: white;
 }

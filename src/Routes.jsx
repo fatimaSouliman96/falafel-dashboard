@@ -15,7 +15,7 @@ import { routerEditBill } from './modules/PurchaseInvoicesMang/routes/routerEdit
 
 export const router = createBrowserRouter([
     {
-      path: "/falafel-dashboard/",
+      path: "/",
       element: <App />,
       children: [ 
             ...routerHome,

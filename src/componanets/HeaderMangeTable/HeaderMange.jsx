@@ -11,7 +11,7 @@ function HeaderMange({textBtn , onChangeSearch , goTo}) {
           <input onChange={ e => onChangeSearch(e)} type="search" className='search-bar' />
           <MdSearch className='search-icon' />
           </div>
-        <button onClick={() => navigate(goTo)} className='add-item' >{textBtn}<CiCirclePlus style={{ paddingLeft: "0.5rem" }} size={35} /></button>
+        <button onClick={() => navigate(goTo)} className='add-btn' >{textBtn}<CiCirclePlus style={{ paddingLeft: "0.5rem" }} size={35} /></button>
     </div>
   )
 }

@@ -1,11 +1,16 @@
+.div-table{
+    width: 100%;
+    direction: rtl!important;
+    margin-top: 2rem;
+    overflow: auto;    
+}
 .table{
     width: 100%;
     direction: rtl!important;
     margin-top: 2rem;
     text-align: right;
     border-collapse: separate;
-    border: none;
-    overflow: auto;
+    border: none!important;
     
 }
 .table-bordered{
@@ -18,10 +23,16 @@
     --bs-table-color-type: var(--bs-table-striped-color);
     --bs-table-bg-type: transparent!important;
     border: none!important;
-    padding-top: 1rem;
+  
     
 }
-tr:nth-child(even) {background-color: #fe83087e!important;}
+.table thead th{
+    vertical-align: bottom!important;
+    width: 19rem!important;
+    padding-bottom: 1rem; 
+    padding-right: 1rem;  
+}
+tr:nth-child(even) {background-color: #fe830859!important;}
 .table th{
     direction: rtl!important;
     background-color: #fe8508!important;
@@ -32,25 +43,26 @@ tr:nth-child(even) {background-color: #fe83087e!important;}
     
 }
 
-.table td {
+.table tr td {
     border: none!important;
     direction: rtl!important;
     background-color: transparent!important;
-    padding: 1rem;
     font-size: 1rem;
     font-weight: 500;
-    height: fit-content!important;
-    
+    width: 19rem!important;
+    padding: 1rem;
 }
 .btns{
-    width: 17rem!important;
+    
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     align-items: center;
     justify-content: center;
+    padding: 1rem!important;
 }
 .btns button {
+    width: 6.5rem;
     margin-left: 1rem;
     border: none;
     color: white;
@@ -59,7 +71,7 @@ tr:nth-child(even) {background-color: #fe83087e!important;}
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    box-shadow: inset  -2px 3px 17px 1px #f5b67696 , -3px 5px 5px 0px #f5b676;
+    box-shadow: inset -2px 3px 17px 1px #f5b67696 , -3px 5px 5px 0px #dddad6;
 }
 .btns .edit{
     background-color: green;

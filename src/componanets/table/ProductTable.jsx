@@ -4,7 +4,7 @@ import '../style/table.css'
 function ProductTable({ infoTh , contentTable}) {
 
   return (
-    <div className='table'>
+    <div className='div-table'>
       <Table striped bordered hover size="sm">
         <thead>
           <tr>

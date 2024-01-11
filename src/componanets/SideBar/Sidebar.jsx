@@ -36,8 +36,7 @@ function Sidebar() {
         <Collapse navbar id="navbarSupportedContent">
           <Navbar.Nav mr="auto">
             <Nav.Item  >
-
-              <NavLink to="/falafel-dashboard/" className="navLink" ><AiFillHome size={30} />
+              <NavLink to="" className="navLink" ><AiFillHome size={30} />
                 الصفحة الرئيسية</NavLink>
             </Nav.Item>
 
@@ -55,7 +54,7 @@ function Sidebar() {
             </Nav.Item>
 
             <Nav.Item className="dropLink" >
-              <Nav.Link onClick={() => dropShow()} to="/falafel-dashboard/main-bills" className="navLink "><RiBillFill size={30} style={{ marginRight: "0.4rem" }} />ادارة فواتير الشراء<IoIosArrowDropdown className={dropDown} style={{ marginRight: "1rem" }} size={25} /> <IoIosArrowDropup className={dropUp} style={{ marginRight: "1rem" }} size={25} /></Nav.Link>
+              <Nav.Link onClick={() => dropShow()} to="/falafel-dashboard/main-bills" className="navLink dropLink"><RiBillFill size={30} style={{ marginRight: "0.4rem" }} />ادارة فواتير الشراء<IoIosArrowDropdown className={dropDown} style={{ marginRight: "1rem" }} size={25} /> <IoIosArrowDropup className={dropUp} style={{ marginRight: "1rem" }} size={25} /></Nav.Link>
               <ul className={drop}>
                 <NavLink to="/falafel-dashboard/all-bills" className="navLink">الفواتير</NavLink>
                 <NavLink to="/falafel-dashboard/paid-bill" className="navLink">الفواتير المدفوعة</NavLink>
