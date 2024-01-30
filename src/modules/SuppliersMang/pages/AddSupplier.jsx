@@ -1,11 +1,15 @@
-import { FaPeopleCarry } from "react-icons/fa";
+import { FaArrowLeft, FaPeopleCarry } from "react-icons/fa";
 import './style/addSupplier.css'
 import { useState } from 'react';
 import axios from 'axios'
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from 'react-router'
+import '../../../componanets/style/form.css'
 
 function AddSupplier() {
+  const navigate = useNavigate()
+
   const [name, setName] = useState("")
   const [phone, setPhone] = useState("")
   const [address, setAddress] = useState("")
@@ -47,11 +51,15 @@ function AddSupplier() {
     setPhone("")
     setAddress("")
   }
+
+  const goTo = () => {
+    navigate("/falafel-dashboard/suppliers")
+  }
   return (
-    <div className='add-supplier'>
-      <h1>اضافة مورد</h1>
+    <div className='add-supplier addPro'>
+      <h1 className='title-sec'>اضافة مورد<FaArrowLeft size={30} style={{cursor:"pointer", color:"var(---olive)" , float:"left"}} onClick={ () => goTo() } /></h1>
       <div className='add' >
-        <FaPeopleCarry size={100} />
+        <FaPeopleCarry className='icon-form' size={100} />
         <div className='form-input'>
           <FloatingLabel controlId="floatingInput" label="اسم المورد" className="mb-3" >
             <Form.Control value={name} onChange={(event) => changeName(event.target.value)} type="text" placeholder="phone" />

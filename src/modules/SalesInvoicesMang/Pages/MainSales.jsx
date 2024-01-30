@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router'
-import './style/mainSales.css'
+
 
 function MainSales() {
   return (

@@ -3,86 +3,93 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import './style/addPro.css'
 import { useLocation } from "react-router-dom";
+import { useNavigate } from 'react-router'
 import axios from 'axios'
 import { IoLogoDropbox } from 'react-icons/io';
+import { FaArrowLeft } from "react-icons/fa6";
+import Toast from 'react-bootstrap/Toast';
 
 function EditProduct() {
-    const location = useLocation();
+  const location = useLocation();
+  const navigate = useNavigate()
 
-    const [name, setName] = useState(location.state.namePro)
-    const [brand, setBrand] = useState(location.state.brand)
-    const [unit, setUnit] = useState(location.state.unit)
-    const [description, setDescription] = useState(location.state.description)
+  const [name, setName] = useState(location.state.namePro)
+  const [brand, setBrand] = useState(location.state.brand)
+  const [unit, setUnit] = useState(location.state.unit)
+  const [description, setDescription] = useState(location.state.description)
+  const [state, setState] = useState()
 
-    function change(value, placeholder) {
+  function changeName(value) {
+    setName(value)
+  }
 
-        console.log(name)
-        if (placeholder == "name") {
-            setName(value)
+  function changeBrand(value) {
+    setBrand(value)
+  }
+
+  function changeUnit(value) {
+    setUnit(value)
+  }
+
+  function changeDescription(value) {
+    setDescription(value)
+  }
+
+  const editPro = async () => {
+
+    await axios.post(`https://api-pos.alzero1store.com/api/products/${location.state.id}`, {
+      name: name,
+      brand: brand,
+      unit: unit,
+      description: description
+    })
+      .then(function (response) {
+        console.log(response);
+        if (response.status == 200) {
+          setState(response.status)
+          // goTo()
         }
 
-        if (placeholder == "brand") {
-            setBrand(value)
-        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+  const goTo = () => {
+    navigate("/falafel-dashboard/product")
+  }
 
-        if (placeholder == "unit") {
-            setUnit(value)
-        }
-        if (placeholder == "description") {
-            setDescription(value)
+  return (
 
-        }
-    }
-
-    const editPro = async () => {
-
-        await axios.post(`https://api-pos.alzero1store.com/api/products/${location.state.id}`, {
-            name: name,
-            brand: brand,
-            unit: unit,
-            description: description
-        })
-            .then(function (response) {
-                console.log(response);
-                if (response.status == 200) {
-                    window.confirm("تم تعديل المنتج بنجاح")
-                }
-
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
-    }
-
-    return (
-        <div className='addPro' >
-        <h1>تعديل المنتج</h1>
-        <div className='add' >
-        <IoLogoDropbox size={200} />
+    <div className='addPro'>
+ 
+      <h1 className='title-sec'>تعديل المنتج <FaArrowLeft size={30} style={{ color: "var(---olive)", float: "left", cursor: "pointer" }} onClick={() => goTo()} /></h1>
+      <div className='add' >
+      <IoLogoDropbox className='icon-form' size={200} />
         <div className='form-input' >
           <FloatingLabel controlId="floatingInput" label="اسم المنتج" className="mb-3" >
-            <Form.Control value={name} onChange={(event) => changeName(event.target.value)} type="text" placeholder="name"  />
+            <Form.Control value={name} onChange={(event) => changeName(event.target.value)} type="text" placeholder="name" />
           </FloatingLabel>
 
           <FloatingLabel controlId="floatingInput" label="نوع المنتج" className="mb-3" >
-            <Form.Control value={brand} onChange={(event) => changeBrand(event.target.value)} type="text" placeholder="brand"  />
+            <Form.Control value={brand} onChange={(event) => changeBrand(event.target.value)} type="text" placeholder="brand" />
           </FloatingLabel>
 
           <FloatingLabel controlId="floatingInput" label="الواحدة" className="mb-3" >
-            <Form.Control value={unit} onChange={(event) => changeUnit(event.target.value)} type="text" placeholder="unit"  />
+            <Form.Control value={unit} onChange={(event) => changeUnit(event.target.value)} type="text" placeholder="unit" />
           </FloatingLabel>
 
           <FloatingLabel controlId="floatingInput" label="الوصف" className="mb-3" >
-            <Form.Control value={description} onChange={(event) => changeDescription(event.target.value)} type="text" placeholder="description"  />
+            <Form.Control value={description} onChange={(event) => changeDescription(event.target.value)} type="text" placeholder="description" />
           </FloatingLabel>
-  
-          <button className='add-item' onClick={() => editPro()} >اضافة المنتج</button>
-        </div>
-          
-        </div>
-  
-      </div>
-    )
-}
 
-export default EditProduct
+          <button className='add-item' onClick={() => editPro()} >تعديل المنتج</button>
+        </div>
+      </div>
+
+
+    </div>
+
+  )
+}
+export default React.memo(EditProduct)

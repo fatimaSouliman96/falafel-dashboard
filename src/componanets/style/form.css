@@ -7,13 +7,32 @@
 
 }
 
-label{
+.form-floating label{
     direction: rtl;
-    /* right:0!important; */
     color: #a8a7a7!important;
-    left: 22rem!important;
+    /* left: 0rem!important; */
+    right: 0!important;
+    transform: scale(.85) translateY(-0.5rem) translateX(6.5rem)!important;
 }
-
+.form-pro  label{
+    transform: scale(.85) translateY(-0.5rem) translateX(2.5rem)!important;
+}
+.profile label{
+    transform: scale(.85) translateY(-0rem) translateX(2.5rem)!important;
+}
+.form-floating{
+    padding-top: 0.5rem;
+}
+.form-floating>.form-control:not(:placeholder-shown)~label{
+    transform: scale(.85) translateY(-0.5rem) translateX(6.5rem)!important;
+}
+.profile label{
+    left: 2rem!important;
+    padding-top: 2rem!important;
+}
+.profile .email label{
+    left: 3rem!important;
+}
 input:focus{
     outline: none!important;
 }
@@ -64,4 +83,20 @@ input:focus{
 }
 .form-pro .custom-select{
     width: auto!important;
+}
+
+
+
+
+@media(max-width:1280px){
+    .form-floating label{
+        transform: scale(.85) translateY(-0.5rem) translateX(5rem)!important;
+    }
+
+}
+
+@media(max-width:700px){
+    .form-floating label{
+        transform: scale(.85) translateY(-0.5rem) translateX(2.5rem)!important;
+    }
 }

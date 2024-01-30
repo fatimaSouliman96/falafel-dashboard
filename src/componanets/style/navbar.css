@@ -14,18 +14,7 @@
     color: #fe83087e;
     cursor: pointer;
 }
-.showList{
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    border-radius: 1rem;
-    box-shadow: 1px 1px 1px 1px gray;
-    background-color: white;
-    list-style-type: none;
-    direction: rtl;
-    padding: 0.5rem;
-    top: 3.5rem;
-}
+
 .nav-bar-header .dropDownList{
     display: none;
 }

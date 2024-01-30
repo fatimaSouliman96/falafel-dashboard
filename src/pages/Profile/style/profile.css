@@ -1,10 +1,4 @@
-.div-profile{
-    width: 73%;
-    padding: 8rem 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 .profile{
     display: flex;
     flex-direction: column;
@@ -13,23 +7,28 @@
     align-items: center;
     width: 50%;
     border: 1px solid #dbd7d7;
-    background-color: rgba(222, 244, 245, 0.219);
     border-radius: 1rem;
     box-shadow: -15px 14px 20px 0px #dbd7d72b , inset -3px 2px 11px 0px #dbd7d7;
+    margin: auto;
+    margin-top: 5rem;
 }
+
 .profile .profile-icon{
     color: var(---background-orange);
     background-color: white;
     border-radius: 50%;
 }
+
 .list .item-list svg{
     color: var(---background-orange);
 }
+
 .list{
     list-style-type: none;
     text-align: right;
     padding-top: 1rem;
 }
+
 .list .item-list{
     cursor: pointer;
     margin-top: 0.1rem;
@@ -41,4 +40,11 @@
 }
 .list .item-list:hover{
     background-color: var(---olive-opacity);
+}
+
+@media(max-width:990px){
+    .profile{
+
+        width: 100%;
+    }
 }

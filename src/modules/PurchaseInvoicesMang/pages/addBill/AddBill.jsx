@@ -1,6 +1,5 @@
 import { useState , useEffect} from 'react'
 import '../style/addBill.css'
-import { RiBillLine } from "react-icons/ri";
 import AddPriceBill from './AddPriceBill';
 import AddSuppBill from './AddSuppBill';
 import { useNavigate } from 'react-router'
@@ -11,7 +10,8 @@ import ContentAddPro from '../../Componanets/ContentAddPro';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import Spinner from 'react-bootstrap/Spinner';
-
+import { FaArrowLeft } from 'react-icons/fa';
+import '../../../../componanets/style/form.css'
 
 
 function AddBill() {
@@ -182,6 +182,7 @@ const onChangeNote = (e) => {
       setItems([])
       setSubItems([])
   }
+  
   const onClickCancelBill = () => {   
     setIdSupp(0)
     setNote("")
@@ -192,16 +193,21 @@ const onChangeNote = (e) => {
     setSubItems([])
    
   }
-  return (
-    <div className='add-bill-form'>
 
-      <h1>اضافة فاتورة<RiBillLine className='bill-icon' size={50} /></h1>
-      <AddSuppBill onSelect={onSelect} idSupp={idSupp}/>
+  const goTo = () => {
+    navigate("/falafel-dashboard/all-bills")
+  }
+
+  return (
+    <div className='add-bill-form '>
+
+      <h1 className='title-sec'>اضافة فاتورة<FaArrowLeft size={30} style={{cursor:"pointer" , color:"var(---olive)" , float:"left"}} onClick={ () => goTo() } /></h1>
+      {/* <AddSuppBill onSelect={onSelect} idSupp={idSupp}/> */}
       <div className='add-pro-to-bill' >
       <div className='form-pro' >
         <h2>اضافة المنتجات في الفاتورة</h2>
         <div className='add-form' >
-          {dropDownPro ? <select value={idPro} required className='custom-select' placeholder="name" onChange={e => onChangeOp(e)} >
+          {/* {dropDownPro ? <select value={idPro} required className='custom-select' placeholder="name" onChange={e => onChangeOp(e)} >
             <option value={0} >اختر منتج</option>
             {dropDownPro.map(ele => [
               <option value={ele.id} key={ele}>{ele.name}</option>
@@ -210,7 +216,7 @@ const onChangeNote = (e) => {
             <Spinner animation="border" role="status">
               <span className="visually-hidden"></span>
             </Spinner>
-          }
+          } */}
 
           <FloatingLabel controlId="floatingInput" label="سعر الواحدة" className="mb-3">
             <Form.Control value={pricePro} required onBlur={() => onChangeTow()} onChange={e => onChangePrice(e)} type="text" placeholder="price" />

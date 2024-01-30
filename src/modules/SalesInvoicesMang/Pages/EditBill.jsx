@@ -1,4 +1,4 @@
-import { FaFileInvoice } from 'react-icons/fa'
+import { FaArrowLeft, FaFileInvoice } from 'react-icons/fa'
 import './style/addBillSales.css'
 import FloatingLabel from 'react-bootstrap/FloatingLabel'
 import Form from 'react-bootstrap/Form'
@@ -49,11 +49,16 @@ function EditBill() {
      setAmount("")
      setNote("")
   }
+
+  const goTo = () => {
+    navigate("/falafel-dashboard/main-sales")
+  }
+
   return (
-    <div className='add-bill' >
-      <h1>تعديل فاتورة المبيع</h1>
+    <div className='add-bill addPro' >
+      <h1 className='title-sec'>تعديل فاتورة المبيع<FaArrowLeft size={30} style={{cursor:"pointer" , color:"var(---olive)" , float:"left"}} onClick={ () => goTo() } /></h1>
       <div className='add-form' >
-        <FaFileInvoice size={150} />
+        <FaFileInvoice className='icon-form' size={150} />
 
         <div className='form' >
           <FloatingLabel controlId="floatingInput" label="تاريخ بداية اليوم" className="mb-3">

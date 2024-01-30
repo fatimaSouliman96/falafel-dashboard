@@ -1,6 +1,5 @@
 .add-bill-form{
-    width: 73%;
-    padding: 8rem 3rem;
+
     display: flex;
     flex-direction: column;
     gap: 3rem;

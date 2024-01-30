@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import './style/addSupplier.css'
 import { useLocation } from "react-router-dom";
-import { FaPeopleCarry } from 'react-icons/fa';
+import { FaArrowLeft, FaPeopleCarry } from 'react-icons/fa';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios'
+import '../../../componanets/style/form.css'
+import { useNavigate } from 'react-router'
 
 function EditSupplier() {
   const location = useLocation()
+  const navigate = useNavigate()
 
   const [name, setName] = useState(location.state.name)
   const [phone, setPhone] = useState(location.state.phone)
@@ -22,13 +25,7 @@ function EditSupplier() {
   function changeAddress(value) {
     setAddress(value)
   }
-  const onSubmit = async (event) => {
-
-    event.preventDefault()
-    console.log(name)
-    console.log(phone)
-    console.log(address)
-    console.log(location.state.id)
+  const onSubmit = async () => {
 
     await axios.post(`https://api-pos.alzero1store.com/api/suppliers/${location.state.id}`, {
       name: name,
@@ -47,9 +44,14 @@ function EditSupplier() {
       });
 
   }
+
+  const goTo = () => {
+    navigate("/falafel-dashboard/suppliers")
+  }
+
   return (
-    <div className='add-supplier'>
-      <h1>تعديل مورد</h1>
+    <div className='add-supplier addPro'>
+      <h1 className='title-sec'>تعديل مورد<FaArrowLeft size={30} style={{cursor:"pointer" , color:"var(---olive)" , float:"left"}} onClick={ () => goTo() } /></h1>
       <div className='add' >
         <div className='form-input'>
           <FloatingLabel controlId="floatingInput" label="اسم المورد" className="mb-3" >
@@ -66,7 +68,7 @@ function EditSupplier() {
 
           <button className='add-item' onClick={(event) => onSubmit(event)} >تعديل المورد</button>
         </div>
-        <FaPeopleCarry size={100} />
+        <FaPeopleCarry className='icon-form' size={100} />
       </div>
     </div>
   )

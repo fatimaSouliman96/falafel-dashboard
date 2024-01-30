@@ -47,7 +47,7 @@ function AllBills() {
     }}
   return (
     <div className='all-bills'>
-      <h1>كل فواتير الشراء</h1>
+      <h1 className='title-sec'>كل فواتير الشراء</h1>
       <HeadersMang onChangeSearch={search} textBtn={"اضافة فاتورة"} goTo={"/falafel-dashboard/add-bill"}/>
       <ProductTable contentTable={<ContentBills goTo={"/falafel-dashboard/edit-bill"} deletePro={deleteBill} data={datBills} />} infoTh={infoCoulmn}/>
     </div>

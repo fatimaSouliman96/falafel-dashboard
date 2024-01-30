@@ -1,14 +1,17 @@
-.addPro{
-    padding: 8rem 1rem;
-    width: 73%;
-    text-align: right;
-}
+
 .addPro .add{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 1rem;
+    position: relative;
+}
+.icon-form{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    opacity: 0.29;
 }
 .addPro .add svg{
     width: 30%;
@@ -27,4 +30,5 @@
     .addPro .add{
         flex-direction: column-reverse;
     }
+    
 }

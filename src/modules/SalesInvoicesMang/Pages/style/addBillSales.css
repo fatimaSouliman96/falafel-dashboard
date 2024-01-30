@@ -15,10 +15,6 @@
     width: 100%;
 }
 
-.add-bill .add-form svg{
-    color: var(---olive);
-}
-
 .add-btn{
     border-radius: 1rem;
     background: linear-gradient(359grad,#808000b3,var(---olive),var(---olive),#808000b3);

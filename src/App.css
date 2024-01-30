@@ -1,8 +1,33 @@
 #root {
   width: 100%;
   height: 100vh;
-  margin: 0 ;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.style {
+  padding: 2rem 1rem;
+  width: 73%;
+  height: 100vh;
+  text-align: right;
+}
+
+.newStyle {
+  padding: 2rem 4rem 1rem 1rem;
+  width: 100%;
+  height: 100vh;
+  text-align: right;
+}
+
+
+@media (max-width:991px) {
+  .style {
+    width: 100%;
+    padding: 1rem!important;
+  }
+  .newStyle {
+    width: 100%;
+    padding: 1rem;
+  }
+}

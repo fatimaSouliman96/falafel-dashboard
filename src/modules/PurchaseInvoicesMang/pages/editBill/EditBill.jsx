@@ -13,6 +13,7 @@ import Form from 'react-bootstrap/Form';
 import Spinner from 'react-bootstrap/Spinner';
 import ProductTable from '../../../../componanets/table/ProductTable';
 import { infoProduct } from '../../const/infoProduct';
+import { FaArrowLeft } from 'react-icons/fa';
 
 function EditBill() {
   const location = useLocation()
@@ -182,10 +183,14 @@ const onChangeNote = (e) => {
    
   }
 
+  
+  const goTo = () => {
+    navigate("/falafel-dashboard/all-bills")
+  }
   return (
     <div className='add-bill-form'>
 
-      <h1>تعديل الفاتورة<RiBillLine className='bill-icon' size={50} /></h1>
+      <h1 className='title-sec'>تعديل الفاتورة<FaArrowLeft size={30} style={{cursor:"pointer" , color:"var(---olive)" , float:"left"}} onClick={ () => goTo() } /></h1>
       <EditSuppBill onSelect={onSelect} idSupp={idSupp}/>
       <div className='add-pro-to-bill' >
       <div className='form-pro' >

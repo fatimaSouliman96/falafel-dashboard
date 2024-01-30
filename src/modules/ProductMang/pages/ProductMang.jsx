@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import './style/product.css'
 import ProductTable from '../../../componanets/table/ProductTable'
 import { useNavigate } from 'react-router'
 import { InfoTable } from '../const/infoTable'
@@ -63,7 +62,7 @@ function ProductMang() {
   }
   return (
     <div className='productMang' >
-      <h1>ادارة المنتجات</h1>
+      <h1 className='title-sec' >ادارة المنتجات</h1>
       <HeaderMange goTo={"addproduct"} textBtn="اضافة منتج" onChangeSearch={onChangeSearch} />
       <ProductTable infoTh={InfoTable} contentTable={<ContentTable deletePro={deletePro} toNavigate={goTo} data={data} />} />
 

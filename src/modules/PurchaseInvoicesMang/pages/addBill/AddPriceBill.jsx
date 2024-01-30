@@ -1,6 +1,7 @@
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
+import '../../../../componanets/style/form.css'
 
 function AddPriceBill({onChangePaid , onChangeNote , totalValue=0 , paidValue , remainingValue=0 , note}) {
 

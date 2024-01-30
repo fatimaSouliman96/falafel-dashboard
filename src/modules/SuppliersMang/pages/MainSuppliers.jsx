@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router'
-import './style/mainSuppliers.css'
 
 function MainSuppliers() {
   return (

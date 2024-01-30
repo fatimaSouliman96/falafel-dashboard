@@ -1,4 +1,3 @@
-import './style/mainSales.css'
 import HeadersMang from '../../../componanets/HeaderMangeTable/HeaderMange'
 import { infoCoulmn } from '../const/infoCoulmnSales'
 import ProductTable from '../../../componanets/table/ProductTable'
@@ -33,7 +32,7 @@ function SalesBill() {
     }}
   return (
     <div className='main-sales'>
-      <h1> فواتير المبيع</h1>
+      <h1 className='title-sec'> فواتير المبيع</h1>
       <HeadersMang textBtn={"اضافة فاتورة"} goTo={"addBill"}/>
       <ProductTable contentTable={<ContentTabel data={billData} deletePro={deleteBill}/>} infoTh={infoCoulmn}/>
     </div>

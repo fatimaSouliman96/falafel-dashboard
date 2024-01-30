@@ -4,7 +4,8 @@ import './style/home.css'
 function Home() {
     
   return (
-    <div className='home' >
+    <div  >
+      <h1 className='title-sec'>الصفحة الرئيسية</h1>
       Home
       
     </div>

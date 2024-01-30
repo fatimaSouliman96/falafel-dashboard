@@ -11,12 +11,14 @@
   ---orange-opacity: #f5b67696;
   ---olive: #808000;
   ---olive-opacity: #80800056;
+  --bs-body-bg: transparent!important;
 }
 *{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'El Messiri', sans-serif;
+
 }
 a {
   font-weight: 500;
@@ -54,11 +56,16 @@ button {
 button:hover {
   border-color: #646cff;
 }
-button:focus,
+/* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+} */
+.title-sec{
+    font-size: 2rem!important;
+    background-color: var( ---orange-opacity);
+    border-radius: 1rem;
+    padding: 1rem;
 }
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -70,4 +77,19 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* @media(max-width:1024px){
+  .title-sec{
+    font-size: 1rem!important;
+    padding-right: 3rem!important;
+
+}
+} */
+@media(max-width:991px){
+  .title-sec{
+    font-size: 1rem!important;
+    padding-right: 3rem!important;
+
+}
 }

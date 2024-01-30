@@ -1,4 +1,4 @@
-import { FaFileInvoice } from 'react-icons/fa'
+import { FaArrowLeft, FaFileInvoice } from 'react-icons/fa'
 import './style/addBillSales.css'
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router'
 
 function AddBillSale() {
   const navigate = useNavigate()
+
   const [ date , setDate ] = useState()
   const [ amount , setAmount ] = useState()
   const [ note , setNote ] = useState()
@@ -52,12 +53,17 @@ function AddBillSale() {
     setDate("")
     setNote("")
   }
+
+  const goTo = () => {
+    navigate("/falafel-dashboard/main-sales")
+  }
+
   return (
-    <div className='add-bill' >
-      <h1>اضافة فاتورة مبيع</h1>
+    <div className='add-bill addPro' >
+      <h1 className='title-sec'>اضافة فاتورة مبيع<FaArrowLeft size={30} style={{cursor:"pointer" , color:"var(---olive)" , float:"left"}} onClick={ () => goTo() } /></h1>
       <div className='add-form' >
-      <FaFileInvoice size={150} />
-        <div className='form' >
+      <FaFileInvoice className='icon-form' size={150} />
+        <div className='form form-input' >
 
           <FloatingLabel controlId="floatingInput" label="تاريخ بداية اليوم" className="mb-3">
             <Form.Control onChange={ e => onChangeDate(e.target.value)} value={date}  type="datetime-local" placeholder="date" />

@@ -4,8 +4,11 @@ import axios from 'axios'
 import { IoLogoDropbox } from "react-icons/io";
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
+import { FaArrowLeft } from 'react-icons/fa';
+import { useNavigate } from 'react-router'
 
 function AddProduct() {
+  const navigate = useNavigate()
 
   const [name, setName] = useState()
   const [brand, setBrand] = useState()
@@ -44,7 +47,7 @@ function AddProduct() {
         console.log(response);
         if (response.status == 200) {
           window.confirm("تم اضافة المنتج بنجاح")
-
+          goTo()
         }
 
       })
@@ -60,12 +63,14 @@ function AddProduct() {
 
 
   }
-
+  const goTo = () => {
+    navigate("/falafel-dashboard/product")
+  }
   return (
     <div className='addPro' >
-      <h1>اضافة منتج</h1>
+      <h1 className='title-sec'>اضافة منتج<FaArrowLeft size={30} style={{color:"var(---olive)" , float:"left" , cursor:"pointer"}} onClick={ () => goTo() } /></h1>
       <div className='add' >
-      <IoLogoDropbox size={200} />
+        <IoLogoDropbox className='icon-form' size={200} />
         <div className='form-input' >
           <FloatingLabel controlId="floatingInput" label="اسم المنتج" className="mb-3" >
             <Form.Control value={name} onChange={(event) => changeName(event.target.value)} type="text" placeholder="name"  />
@@ -84,7 +89,8 @@ function AddProduct() {
           </FloatingLabel>
   
           <button className='add-item' onClick={(event) => onSubmit(event)} >اضافة المنتج</button>
-        </div>
+      </div>
+        
         
       </div>
 

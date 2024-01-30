@@ -3,8 +3,6 @@ import ProductTable from '../../../componanets/table/ProductTable'
 import { infoSupp } from '../const/infoSupp'
 import axios from 'axios'
 import TableContentSuppliers from '../componanets/TableContentSuppliers'
-import './style/suppliersMang.css'
-import { CiCirclePlus } from "react-icons/ci";
 import { useNavigate } from 'react-router'
 import HeaderMange from '../../../componanets/HeaderMangeTable/HeaderMange'
 
@@ -62,7 +60,7 @@ function SuppliersMang() {
   
   return (
     <div className='suppliers' >
-      <h1 className='title' >ادارة الموردين</h1>
+      <h1 className='title-sec' >ادارة الموردين</h1>
       <HeaderMange goTo={"addSupplier"} textBtn={"اضافة مورد"}  onChangeSearch={onChangeSearch}/>
       <ProductTable infoTh={infoSupp} contentTable={<TableContentSuppliers data={data} toNavigate={goTo} deletePro={deleteSupp}/>}/>
     </div>

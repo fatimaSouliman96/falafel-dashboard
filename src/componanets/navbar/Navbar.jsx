@@ -21,7 +21,7 @@ function Navbar() {
   }
   return (
     <div className='nav-bar-header' >
-      <FaCircleUser size={30} onClick={() => showList()} />
+      
       <ul className={styleList}>
         <span><FaCircleUser size={30} />احمد</span>
         <span>ahmad@gmail.com</span>

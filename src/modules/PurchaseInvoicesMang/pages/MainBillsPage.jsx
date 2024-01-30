@@ -1,5 +1,4 @@
-import React from 'react'
-import './style/mainBills.css'
+
 import { Outlet } from 'react-router'
 
 function MainBillsPage() {
