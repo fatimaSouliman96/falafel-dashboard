@@ -3,7 +3,7 @@ import Home from "../Home";
 export const routerHome = 
 [
     {
-    path: "/falafel-dashboard",
+    path: "/falafel-dashboard/main/",
     element: <Home />,
     }
 ]

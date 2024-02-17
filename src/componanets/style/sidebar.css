@@ -5,7 +5,7 @@
     z-index: 9;
     flex-direction: column!important;
     width: 25%;
-    height: fit-content;
+    height: 95%;
     float: right;
     border-radius: 1rem;
     margin: 1rem 0.5rem 0.5rem 0.5rem;
@@ -14,6 +14,7 @@
     transform: translateX(-1%);
     transition: 0.7s ease;
     padding: 2rem!important;
+    overflow-y: auto;
 
 }
 .navbar-brand{
@@ -97,7 +98,6 @@
     width: 100%;
     border-radius: 1rem;
     padding: 1rem;
-
 }
 
 
@@ -125,6 +125,7 @@
 .dropLink{
     display: flex;
     flex-direction: column;
+    padding-right: 0.4rem;
 }
 .drop{
     display: none;  
@@ -167,6 +168,7 @@
     transform: translateX(90%);
     transition: 0.7s ease;
     padding-left: 0rem!important;
+    overflow: visible!important;
 }
 .styleIconMenu{
     position: absolute;
@@ -175,8 +177,9 @@
   }
 .newStyleIconMenu{
     position: absolute;
-    right: 20rem;
+    right: 19rem;
     z-index: 9;
+    top: 1rem;
   }
 .newProfile{
     position: absolute;
@@ -199,7 +202,7 @@
     padding: 0.5rem;
     right: 20.5em;
     border-radius: 0.3rem 0.5rem 0.3rem 0.3rem;
-    top: 13%;
+    top: 17%;
     width: 10rem;
     text-align: center;
 }
@@ -214,7 +217,7 @@
     right: 20.5em;
     width: 10rem;
     border-radius: 0.3rem 0.5rem 0.3rem 0.3rem;
-    top: 31%;
+    top: 32%;
 }
 .stylePro{
     display: block!important;
@@ -227,7 +230,7 @@
     right: 20.5em;
     width: 10rem;
     border-radius: 0.3rem 0.5rem 0.3rem 0.3rem;
-    top: 43%;
+    top: 44%;
 }
 .styleSupp{
     display: block!important;
@@ -240,7 +243,7 @@
     right: 20.5em;
     width: 10rem;
     border-radius: 0.3rem 0.5rem 0.3rem 0.3rem;
-    top: 55%;
+    top: 56%;
 }
 .styleBuyBill{
     display: block!important;
@@ -266,7 +269,7 @@
     right: 20.5em;
     width: 10rem;
     border-radius: 0.3rem 0.5rem 0.3rem 0.3rem;
-    bottom: 12%;
+    bottom: 13%;
 }
 .styleStore{
     display: block!important;
@@ -279,7 +282,7 @@
     right: 20.5em;
     width: 10rem;
     border-radius: 0.3rem 0.5rem 0.3rem 0.3rem;
-    bottom: 0.5%;
+    bottom: 0.9%;
 }
 
 @media (max-width:1344px) {

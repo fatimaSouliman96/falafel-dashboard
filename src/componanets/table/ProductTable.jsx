@@ -13,7 +13,7 @@ function ProductTable({ infoTh , contentTable}) {
                 <th key={ele} >{ele.name}</th>
               ])
             }
-            <th></th>
+       
           </tr>
         </thead>
         <tbody>

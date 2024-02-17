@@ -3,7 +3,7 @@ import EditBill from "../pages/editBill/EditBill"
 export const routerEditBill = 
 [
     {
-    path: "/falafel-dashboard/edit-bill",
+    path: "/falafel-dashboard/main/edit-bill",
     element: <EditBill />,
 
     }

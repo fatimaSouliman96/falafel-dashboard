@@ -3,7 +3,7 @@ import AddBill from "../pages/addBill/AddBill";
 export const routerAddBill = 
 [
     {
-    path: "/falafel-dashboard/add-bill",
+    path: "/falafel-dashboard/main/add-bill",
     element: <AddBill />,
  
     }

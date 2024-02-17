@@ -33,7 +33,7 @@ function EditBill() {
        console.log(response);
        if (response.status == 200) {
          window.confirm("تم تعديل الفاتورة بنجاح")
-         navigate("/falafel-dashboard/main-sales")
+         navigate("/falafel-dashboard/main/main-sales")
        }
      })
      .catch(function (error) {
@@ -51,7 +51,7 @@ function EditBill() {
   }
 
   const goTo = () => {
-    navigate("/falafel-dashboard/main-sales")
+    navigate("/falafel-dashboard/main/main-sales")
   }
 
   return (

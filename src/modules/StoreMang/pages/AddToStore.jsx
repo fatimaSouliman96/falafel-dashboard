@@ -11,7 +11,7 @@ function AddToStore() {
 
 
     const goTo = () => {
-        navigate("/falafel-dashboard/main-store")
+        navigate("/falafel-dashboard/main/main-store")
       }
     return (
         <div className="addPro" >

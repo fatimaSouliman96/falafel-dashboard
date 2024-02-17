@@ -3,7 +3,7 @@ import PaidBill from "../pages/PaidBill";
 export const routerPaidBill = 
 [
     {
-    path: "/falafel-dashboard/paid-bill",
+    path: "/falafel-dashboard/main/paid-bill",
     element: <PaidBill />,
     }
 ]

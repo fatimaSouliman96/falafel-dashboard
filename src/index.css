@@ -64,7 +64,7 @@ button:focus-visible {
     font-size: 2rem!important;
     background-color: var( ---orange-opacity);
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 @media (prefers-color-scheme: light) {
   :root {

@@ -9,12 +9,12 @@ import '../../../componanets/style/form.css'
 import { useNavigate } from 'react-router'
 
 function EditSupplier() {
-  const location = useLocation()
+
   const navigate = useNavigate()
 
-  const [name, setName] = useState(location.state.name)
-  const [phone, setPhone] = useState(location.state.phone)
-  const [address, setAddress] = useState(location.state.address)
+  const [name, setName] = useState(localStorage.getItem("name"))
+  const [phone, setPhone] = useState(localStorage.getItem("phone"))
+  const [address, setAddress] = useState(localStorage.getItem("address"))
 
   function changeName(value) {
     setName(value)
@@ -27,7 +27,7 @@ function EditSupplier() {
   }
   const onSubmit = async () => {
 
-    await axios.post(`https://api-pos.alzero1store.com/api/suppliers/${location.state.id}`, {
+    await axios.post(`https://api-pos.alzero1store.com/api/suppliers/${localStorage.getItem("id")}`, {
       name: name,
       phone: phone,
       address: address
@@ -36,6 +36,7 @@ function EditSupplier() {
         console.log(response);
         if (response.status == 200) {
           window.confirm("تم تعديل المورد بنجاح")
+          goTo()
         }
 
       })
@@ -46,7 +47,7 @@ function EditSupplier() {
   }
 
   const goTo = () => {
-    navigate("/falafel-dashboard/suppliers")
+    navigate("/falafel-dashboard/main/suppliers")
   }
 
   return (

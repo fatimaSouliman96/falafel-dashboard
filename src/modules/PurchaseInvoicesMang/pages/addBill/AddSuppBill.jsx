@@ -9,7 +9,7 @@ function AddSuppBill({ onSelect, idSupp }) {
   useEffect(() => {
     // suppliers/dropDownSupplier
     axios.get('https://api-pos.alzero1store.com/api/suppliers/dropDownSupplier')
-      .then(res => setDataSupp(res.data.data))
+      .then(res => console.log(res))
   }, [])
 
   return (

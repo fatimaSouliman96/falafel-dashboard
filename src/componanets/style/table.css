@@ -1,8 +1,8 @@
 .div-table{
     width: 100%;
     direction: rtl!important;
-    margin-top: 2rem;
-    overflow: auto;    
+    overflow: auto;
+    padding: 2rem;    
 }
 .table{
     width: 100%;
@@ -26,11 +26,17 @@
   
     
 }
+.table{
+    border-spacing: 0.3125rem;
+}
 .table thead th{
-    vertical-align: bottom!important;
+    /* vertical-align: bottom!important; */
+    text-align: center;
     width: 19rem!important;
-    padding-bottom: 1rem; 
-    padding-right: 1rem;  
+    padding: 1rem; 
+    border-radius: 8px;
+    border: none!important;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.63);
 }
 tr:nth-child(even) {background-color: #fe830859!important;}
 .table th{
@@ -49,17 +55,23 @@ tr:nth-child(even) {background-color: #fe830859!important;}
     background-color: transparent!important;
     font-size: 1rem;
     font-weight: 500;
-    width: 19rem!important;
-    padding: 1rem;
+    text-align: center;
+    padding-top: 1.5rem;
+    border-radius: 8px;
+    border: none!important;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.63);
 }
 .btns{
-    
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     align-items: center;
     justify-content: center;
     padding: 1rem!important;
+    width: 19rem;
+    border-radius: 8px!important;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.63);
 }
 .btns button {
     width: 6.5rem;

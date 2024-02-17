@@ -1,0 +1,23 @@
+.sign-in{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+    /* justify-content: center; */
+    align-items: center;
+    width: 50%;
+    border: 1px solid #dbd7d7;
+    border-radius: 1rem;
+    box-shadow: -15px 14px 20px 0px #dbd7d72b , inset -3px 2px 11px 0px #dbd7d7;
+    margin: auto;
+    margin-top: 5rem;
+}
+.sign-in .form-floating{
+    width: 100%!important;
+}
+.sign-in .form-control{
+    width: 100%!important;
+}
+.sign-in button{
+    width: 100%;
+}

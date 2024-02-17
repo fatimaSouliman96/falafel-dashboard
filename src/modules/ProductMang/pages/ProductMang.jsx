@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router'
 import { InfoTable } from '../const/infoTable'
 import axios from 'axios'
 import ContentTable from '../componanets/ContentTable'
-import { CiCirclePlus } from "react-icons/ci";
 import HeaderMange from '../../../componanets/HeaderMangeTable/HeaderMange'
 
 function ProductMang() {
@@ -23,15 +22,12 @@ function ProductMang() {
   
 
   const goTo = (num, id) => {
-    navigate("editProduct", {
-      state: {
-        id: id,
-        namePro: data[num].name,
-        brand: data[num].brand,
-        unit: data[num].unit,
-        description: data[num].description
-      }
-    })
+    navigate("editProduct")
+    localStorage.setItem("id",id)
+    localStorage.setItem("namePro",data[num].name)
+    localStorage.setItem("brand",data[num].brand)
+    localStorage.setItem("unit",data[num].unit)
+    localStorage.setItem("description",data[num].description)
   }
 
   async function deletePro(id) {
@@ -65,7 +61,6 @@ function ProductMang() {
       <h1 className='title-sec' >ادارة المنتجات</h1>
       <HeaderMange goTo={"addproduct"} textBtn="اضافة منتج" onChangeSearch={onChangeSearch} />
       <ProductTable infoTh={InfoTable} contentTable={<ContentTable deletePro={deletePro} toNavigate={goTo} data={data} />} />
-
     </div>
   )
 }

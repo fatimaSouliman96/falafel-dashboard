@@ -3,7 +3,7 @@ import BillDatils from "../pages/BillDatils";
 export const routerDatils = 
 [
     {
-    path: "/falafel-dashboard/bill-datils",
+    path: "/falafel-dashboard/main/bill-datils",
     element: <BillDatils />,
     }
 ]

@@ -150,7 +150,7 @@ const onChangeNote = (e) => {
     //     console.log(response);
     //     if (response.status == 200) {
     //       window.confirm("تم تعديل الفاتورة بنجاح")
-    //       navigate("/falafel-dashboard/all-bills")
+    //       navigate("/falafel-dashboard/main/all-bills")
     //     }
     //   })
     //   .catch(function (error) {
@@ -185,7 +185,7 @@ const onChangeNote = (e) => {
 
   
   const goTo = () => {
-    navigate("/falafel-dashboard/all-bills")
+    navigate("/falafel-dashboard/main/all-bills")
   }
   return (
     <div className='add-bill-form'>

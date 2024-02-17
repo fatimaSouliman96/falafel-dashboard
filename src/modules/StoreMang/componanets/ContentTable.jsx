@@ -14,10 +14,10 @@ function ContentTable({data}) {
                         <td>{ele.pro}</td>
                         <td>{ele.totalAmount}</td>
                         <td>{ele.low}</td>
-                        <td className='btns' >
+                        <div className='btns' >
                             <button className='edit' onClick={e => toNavigate(index, ele.id)} > <FaRegEdit size={18} /> تعديل</button>
                             <button className='del' onClick={e => deletePro(ele.id)}><MdDeleteOutline size={18} /> حذف </button>
-                        </td>
+                        </div>
                     </tr>
 
 

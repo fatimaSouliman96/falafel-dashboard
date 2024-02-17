@@ -9,7 +9,7 @@ function PaidBill() {
     <div>
        <div className='paid-bills'>
       <h1 className='title-sec'> الفواتير المدفوعة</h1>
-      <HeadersMang textBtn={"اضافة فاتورة"} goTo={"/falafel-dashboard/add-bill"}/>
+      <HeadersMang textBtn={"اضافة فاتورة"} goTo={"/falafel-dashboard/main/add-bill"}/>
       <ProductTable contentTable={<ContentBills />} infoTh={infoCoulmn}/>
     </div>
     </div>

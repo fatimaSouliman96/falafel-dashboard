@@ -9,7 +9,6 @@ import { infoProduct } from '../../const/infoProduct';
 import ContentAddPro from '../../Componanets/ContentAddPro';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
-import Spinner from 'react-bootstrap/Spinner';
 import { FaArrowLeft } from 'react-icons/fa';
 import '../../../../componanets/style/form.css'
 
@@ -20,7 +19,7 @@ function AddBill() {
   const [idSupp, setIdSupp] = useState()
   const [ items , setItems ] = useState([])
   const [subItems, setSubItems] = useState([])
-  const [remainingValue, setRemainingValue] = useState()
+  const [remainingValue, setRemainingValue] = useState(0)
   const [paidValue, setPaidValue] = useState()
   const [totalValue, setTotalValue] = useState(0)
   const [note, setNote] = useState()
@@ -42,7 +41,7 @@ function AddBill() {
 
 useEffect(() => {
   axios.get('https://api-pos.alzero1store.com/api/products/dropdownProduct')
-    .then(res => setDropDownPro(res.data.data))
+    .then(res => console.log(res))
 }, [])
 const onChangeOp = (e) => {
   setIdPro(e.target.value)
@@ -65,7 +64,7 @@ const onChangeTow = () => {
 const onClickAddPro = () => {
   let product = {
     id:idPro,
-    product: namePro,
+    product: 2,
     price: pricePro,
     quantity: amount,
     sub_total: totalPrice
@@ -147,7 +146,7 @@ const onChangeNote = (e) => {
     await axios.post('https://api-pos.alzero1store.com/api/invoices', {
       invoice: {
         user_id: "1",
-        spplier_id: idSupp,
+        spplier_id: 2,
         invoice_number: localStorage.getItem("idBill"),
         invoice_date: currentDate,
         total_amount: totalValue,
@@ -162,7 +161,7 @@ const onChangeNote = (e) => {
         console.log(response);
         if (response.status == 200) {
           window.confirm("تم اضافة الفاتورة بنجاح")
-          navigate("/falafel-dashboard/all-bills")
+          navigate("/falafel-dashboard/main/all-bills")
         }
       })
       .catch(function (error) {
@@ -195,7 +194,7 @@ const onChangeNote = (e) => {
   }
 
   const goTo = () => {
-    navigate("/falafel-dashboard/all-bills")
+    navigate("/falafel-dashboard/main/all-bills")
   }
 
   return (

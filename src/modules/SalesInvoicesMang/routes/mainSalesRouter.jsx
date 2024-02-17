@@ -6,7 +6,7 @@ import { routerSalesBill } from "./salesBillRouter";
 export const routerMainSales =
     [
         {
-            path: "/falafel-dashboard/main-sales",
+            path: "/falafel-dashboard/main/main-sales",
             element: <MainSales />,
             children: [
                 ...routerSalesBill,

@@ -45,11 +45,13 @@ function AllBills() {
           console.log(error);
         });
     }}
+
+ 
   return (
     <div className='all-bills'>
       <h1 className='title-sec'>كل فواتير الشراء</h1>
-      <HeadersMang onChangeSearch={search} textBtn={"اضافة فاتورة"} goTo={"/falafel-dashboard/add-bill"}/>
-      <ProductTable contentTable={<ContentBills goTo={"/falafel-dashboard/edit-bill"} deletePro={deleteBill} data={datBills} />} infoTh={infoCoulmn}/>
+      <HeadersMang onChangeSearch={search} textBtn={"اضافة فاتورة"} goTo={"/falafel-dashboard/main/add-bill"}/>
+      <ProductTable contentTable={<ContentBills goTo={"/falafel-dashboard/main/edit-bill"} deletePro={deleteBill} data={datBills} />} infoTh={infoCoulmn}/>
     </div>
   )
 }

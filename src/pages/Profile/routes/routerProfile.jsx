@@ -3,7 +3,7 @@ import Profile from "../Profile";
 export const routerProfile = 
 [
     {
-    path: "/falafel-dashboard/profile",
+    path: "/falafel-dashboard/main/profile",
     element: <Profile />,
     }
 ]

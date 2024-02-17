@@ -7,17 +7,17 @@ import { useNavigate } from 'react-router'
 import axios from 'axios'
 import { IoLogoDropbox } from 'react-icons/io';
 import { FaArrowLeft } from "react-icons/fa6";
-import Toast from 'react-bootstrap/Toast';
+
 
 function EditProduct() {
-  const location = useLocation();
-  const navigate = useNavigate()
 
-  const [name, setName] = useState(location.state.namePro)
-  const [brand, setBrand] = useState(location.state.brand)
-  const [unit, setUnit] = useState(location.state.unit)
-  const [description, setDescription] = useState(location.state.description)
-  const [state, setState] = useState()
+  const navigate = useNavigate()
+  
+  const [name, setName] = useState(localStorage.getItem("namePro"))
+  const [brand, setBrand] = useState(localStorage.getItem("brand"))
+  const [unit, setUnit] = useState(localStorage.getItem("unit"))
+  const [description, setDescription] = useState(localStorage.getItem("description"))
+  
 
   function changeName(value) {
     setName(value)
@@ -37,7 +37,7 @@ function EditProduct() {
 
   const editPro = async () => {
 
-    await axios.post(`https://api-pos.alzero1store.com/api/products/${location.state.id}`, {
+    await axios.post(`https://api-pos.alzero1store.com/api/products/${localStorage.getItem("id")}`, {
       name: name,
       brand: brand,
       unit: unit,
@@ -46,7 +46,7 @@ function EditProduct() {
       .then(function (response) {
         console.log(response);
         if (response.status == 200) {
-          setState(response.status)
+        
           // goTo()
         }
 
@@ -55,8 +55,9 @@ function EditProduct() {
         console.log(error);
       });
   }
+
   const goTo = () => {
-    navigate("/falafel-dashboard/product")
+    navigate("/falafel-dashboard/main/product")
   }
 
   return (

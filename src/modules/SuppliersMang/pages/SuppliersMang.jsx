@@ -19,14 +19,11 @@ function SuppliersMang() {
     } , [])
 
     const goTo = (num, id) => {
-      navigate("editSupplier", {
-        state: {
-          id: id,
-          name: data[num].name,
-          phone: data[num].phone,
-          address: data[num].address,
-        }
-      })
+      navigate("editSupplier")
+      localStorage.setItem("id",id)
+      localStorage.setItem("name",data[num].name)
+      localStorage.setItem("phone",data[num].phone)
+      localStorage.setItem("address",data[num].address)
     }
     async function deleteSupp(id) {
       const conf = window.confirm("هل تريد حذف هذا المورد")

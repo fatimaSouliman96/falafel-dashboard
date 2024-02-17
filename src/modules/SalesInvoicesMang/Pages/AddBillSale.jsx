@@ -37,7 +37,7 @@ function AddBillSale() {
         console.log(response);
         if (response.status == 200) {
           window.confirm("تم اضافة الفاتورة بنجاح")
-          navigate("/falafel-dashboard/main-sales")
+          navigate("/falafel-dashboard/main/main-sales")
         }
       })
       .catch(function (error) {
@@ -55,7 +55,7 @@ function AddBillSale() {
   }
 
   const goTo = () => {
-    navigate("/falafel-dashboard/main-sales")
+    navigate("/falafel-dashboard/main/main-sales")
   }
 
   return (

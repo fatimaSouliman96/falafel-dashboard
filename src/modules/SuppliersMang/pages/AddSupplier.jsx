@@ -34,6 +34,7 @@ function AddSupplier() {
         console.log(response);
         if (response.status == 200) {
           window.confirm("تم اضافة المورد بنجاح")
+          goTo()
         }
 
 
@@ -53,7 +54,7 @@ function AddSupplier() {
   }
 
   const goTo = () => {
-    navigate("/falafel-dashboard/suppliers")
+    navigate("/falafel-dashboard/main/suppliers")
   }
   return (
     <div className='add-supplier addPro'>
